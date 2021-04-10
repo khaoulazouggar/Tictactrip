@@ -1,0 +1,236 @@
+.home-image {
+  background-image: url(../photos/migration-us.jpg);
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 3;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home-image::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  z-index: -4;
+  background: #3b1e00;
+}
+
+.showcase-content {
+  width: 1300px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.barre_recherche {
+  width: 37%;
+  background-color: #21314d;
+  color: #ffffff;
+  min-width: 282px;
+  position: relative;
+  padding: 1.143rem;
+  border-radius: 0.429rem;
+  box-sizing: border-box;
+}
+
+.barre_text {
+  width: 61%;
+  height: 100%;
+}
+
+.description {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 106px;
+}
+.description h2 {
+  margin: 0 auto;
+  padding-top: 6rem;
+  font-family: Circular, Helvetica, Arial, sans-serif;
+  font-size: 3rem;
+  line-height: 1.38;
+  letter-spacing: -0.0286rem;
+  color: #fff;
+  text-shadow: 0 0 32px rgb(0, 0, 0);
+}
+.description h3 {
+  font-family: Circular, Helvetica, Arial, sans-serif;
+  font-size: 1.714rem;
+  font-weight: bold;
+  line-height: 1.42;
+  letter-spacing: -0.0214rem;
+  text-shadow: 0 0 24px rgb(0, 0, 0);
+  color: #fff6b1;
+  margin-top: 1.143rem;
+}
+
+.inpt {
+  font-size: 1rem;
+  border: 1px solid #b2b2b2;
+  border-radius: 0.214rem;
+  color: #333333d4;
+  padding: 0.571rem;
+  line-height: 1.3rem;
+  width: 90%;
+  outline: none;
+  box-sizing: border-box;
+}
+.inpt:focus, .passenger-summary:focus {
+  padding: 0.571rem;
+  border-color: #01c3a7;
+  border-width: 1px;
+  box-shadow: inset 0 0.07143rem 0.07143rem rgba(0, 0, 0, 0.075), 0 0 0.57143rem rgba(72, 213, 181, 0.6);
+}
+.destination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 4px;
+}
+.image {
+  height: 1.4em;
+  width: 1.4em;
+}
+.via {
+  width: fit-content;
+  padding: 4px 8px 4px 4px;
+}
+.via:hover {
+  background-color: #121b2b;
+  border-radius: 0.214rem;
+  cursor: pointer;
+}
+.via_content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-bottom: 4px;
+}
+
+.From_To {
+  padding-right: 0.571rem;
+  text-align: right;
+  width: 34px;
+}
+
+.via_content_first {
+  width: 30%;
+}
+
+.via_content_second {
+  width: 70%;
+}
+
+.inpt1 {
+  width: 100%;
+  margin-bottom: 4px;
+}
+
+.radios {
+  display: flex;
+  height: 100px;
+  background: #2b3a56;
+  border-radius: 0.214rem;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.radio {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.out_return {
+  display: flex;
+  justify-content: space-between;
+}
+
+.out,
+.return {
+  width: 48%;
+  text-align: center;
+}
+
+.inline_div {
+  display: flex;
+  justify-content: space-between;
+}
+.day{
+    cursor: pointer;
+    font-family: "Open Sans",Helvetica,Arial,sans-serif;
+    font-size: 0.857rem;
+    line-height: 1.5;
+}
+.day:hover{
+    text-decoration: underline
+}
+.day_div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.in_inline_div{
+    width: 48%;
+}
+
+.out_span, .return_span{
+    font-family: "Open Sans",Helvetica,Arial,sans-serif;
+    font-size: 1.143rem;
+    font-weight: bold;
+    line-height: 1.5;
+    text-transform: uppercase;
+    margin-bottom: 0.571rem;
+}
+
+.hr{
+    border-top: 1px solid #B2B2B2;
+    border-bottom: none;
+    opacity: 0.2;
+}
+.passenger-summary{
+    display: flex;
+    border: 1px solid transparent;
+    cursor: pointer;
+    background-color: #FFFFFF;
+    border-radius: 0.214rem;
+    line-height: 1.39rem;
+    padding: 0.571rem;
+    padding-right: 0px;
+    text-align: left;
+    width: 100%;
+    justify-content: space-between;
+    color: #333333d4;
+    align-items: center;
+    outline: none;
+}
+
+.adult{
+    font-weight: bold;
+    color: black;
+}
+
+.submit{
+    border: none;
+    cursor: pointer;
+    background-color: #01C3A7;
+    border-radius: 0.429rem;
+    color: #FFFFFF;
+    width: 100%;
+    font-family: Circular,Helvetica,Arial,sans-serif;
+    font-size: 1.429rem;
+    font-weight: bold;
+    line-height: 1.5;
+    letter-spacing: 0px;
+    padding: 0.571rem;
+    margin-top: 1.143rem;
+}
