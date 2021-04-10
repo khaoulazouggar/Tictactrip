@@ -83,7 +83,8 @@
   outline: none;
   box-sizing: border-box;
 }
-.inpt:focus, .passenger-summary:focus {
+.inpt:focus,
+.passenger-summary:focus {
   padding: 0.571rem;
   border-color: #01c3a7;
   border-width: 1px;
@@ -98,6 +99,7 @@
 .image {
   height: 1.4em;
   width: 1.4em;
+  cursor: pointer;
 }
 .via {
   width: fit-content;
@@ -165,61 +167,119 @@
   display: flex;
   justify-content: space-between;
 }
-.day{
-    cursor: pointer;
+.day {
+  cursor: pointer;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 0.857rem;
+  line-height: 1.5;
+}
+.day:hover {
+  text-decoration: underline;
+}
+.day_div, .inline_summary, .railcard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.in_inline_div, .in_inline_summary {
+  width: 48%;
+}
+
+.out_span,
+.return_span {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 1.143rem;
+  font-weight: bold;
+  line-height: 1.5;
+  text-transform: uppercase;
+  margin-bottom: 0.571rem;
+}
+
+.hr {
+  border-top: 1px solid #b2b2b2;
+  border-bottom: none;
+  opacity: 0.2;
+}
+.passenger-summary {
+  display: flex;
+  border: 1px solid transparent;
+  cursor: pointer;
+  background-color: #ffffff;
+  border-radius: 0.214rem;
+  line-height: 1.39rem;
+  padding: 0.571rem;
+  padding-right: 0px;
+  text-align: left;
+  width: 100%;
+  justify-content: space-between;
+  color: #333333d4;
+  align-items: center;
+  outline: none;
+}
+
+.adult {
+  font-weight: bold;
+  color: black;
+}
+
+.submit {
+  border: none;
+  cursor: pointer;
+  background-color: #01c3a7;
+  border-radius: 0.429rem;
+  color: #ffffff;
+  width: 100%;
+  font-family: Circular, Helvetica, Arial, sans-serif;
+  font-size: 1.429rem;
+  font-weight: bold;
+  line-height: 1.5;
+  letter-spacing: 0px;
+  padding: 0.571rem;
+  margin-top: 1.143rem;
+  outline: none;
+}
+
+.submit:hover, .done:hover{
+    background-color: #01AA91;
+}
+.submit:focus, .done:hover{
+    background-color: #01AA91;
+}
+
+.summary{
+    background-clip: border-box;
+    background-color: #FFFFFF;
+    border: solid 1px #01C3A7;
+    position: absolute;
+    z-index: 100;
+    width: 30rem;
+}
+
+.summary span{
     font-family: "Open Sans",Helvetica,Arial,sans-serif;
     font-size: 0.857rem;
-    line-height: 1.5;
-}
-.day:hover{
-    text-decoration: underline
-}
-.day_div{
-    display: flex;
-    justify-content: space-between;
-}
-
-.in_inline_div{
-    width: 48%;
-}
-
-.out_span, .return_span{
-    font-family: "Open Sans",Helvetica,Arial,sans-serif;
-    font-size: 1.143rem;
-    font-weight: bold;
-    line-height: 1.5;
-    text-transform: uppercase;
-    margin-bottom: 0.571rem;
-}
-
-.hr{
-    border-top: 1px solid #B2B2B2;
-    border-bottom: none;
-    opacity: 0.2;
-}
-.passenger-summary{
-    display: flex;
-    border: 1px solid transparent;
-    cursor: pointer;
-    background-color: #FFFFFF;
-    border-radius: 0.214rem;
-    line-height: 1.39rem;
-    padding: 0.571rem;
-    padding-right: 0px;
-    text-align: left;
-    width: 100%;
-    justify-content: space-between;
+    line-height: 0;
+    letter-spacing: 0px;
+    font-weight: normal;
     color: #333333d4;
-    align-items: center;
-    outline: none;
+}
+.summary_content{
+    padding: 1.143rem;
+    padding-top: 0.571rem;
+}
+.inline_summary{
+    display: flex;
 }
 
-.adult{
-    font-weight: bold;
-    color: black;
+.inpt2{
+    width: 67%;
 }
 
-.submit{
+.inpt3{
+    width: 25%;
+}
+.done{
     border: none;
     cursor: pointer;
     background-color: #01C3A7;
@@ -229,8 +289,11 @@
     font-family: Circular,Helvetica,Arial,sans-serif;
     font-size: 1.429rem;
     font-weight: bold;
-    line-height: 1.5;
-    letter-spacing: 0px;
-    padding: 0.571rem;
-    margin-top: 1.143rem;
+    min-height: 42px;
+    outline: none;
+}
+
+.railcard_span{
+    color: #3367AB !important;
+    line-height: 4 !important;
 }
