@@ -82,6 +82,7 @@
   width: 90%;
   outline: none;
   box-sizing: border-box;
+  background-color: white;
 }
 .inpt:focus,
 .passenger-summary:focus {
@@ -115,6 +116,7 @@
   justify-content: space-between;
   width: 100%;
   padding-bottom: 4px;
+  transition: opacity 1s ease-out;
 }
 
 .From_To {
@@ -150,6 +152,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: pointer;
 }
 
 .out_return {
@@ -161,6 +164,16 @@
 .return {
   width: 48%;
   text-align: center;
+  position: relative;
+}
+.disable_return {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: #21314d;
+  opacity: 0.5;
 }
 
 .inline_div {
@@ -176,13 +189,17 @@
 .day:hover {
   text-decoration: underline;
 }
-.day_div, .inline_summary, .railcard {
+.day_div,
+.inline_summary,
+.railcard {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 4px;
 }
 
-.in_inline_div, .in_inline_summary {
+.in_inline_div,
+.in_inline_summary {
   width: 48%;
 }
 
@@ -209,7 +226,7 @@
   border-radius: 0.214rem;
   line-height: 1.39rem;
   padding: 0.571rem;
-  padding-right: 0px;
+  padding-right: 3px;
   text-align: left;
   width: 100%;
   justify-content: space-between;
@@ -238,62 +255,110 @@
   padding: 0.571rem;
   margin-top: 1.143rem;
   outline: none;
+  position: relative;
+}
+.submit_image {
+  position: absolute;
+  right: 1.143rem;
+  top: 10px;
 }
 
-.submit:hover, .done:hover{
-    background-color: #01AA91;
+.img {
+  width: 20px;
+  height: 20px;
 }
-.submit:focus, .done:hover{
-    background-color: #01AA91;
-}
-
-.summary{
-    background-clip: border-box;
-    background-color: #FFFFFF;
-    border: solid 1px #01C3A7;
-    position: absolute;
-    z-index: 100;
-    width: 30rem;
+.img1 {
+  width: 13px;
+  height: 13px;
 }
 
-.summary span{
-    font-family: "Open Sans",Helvetica,Arial,sans-serif;
-    font-size: 0.857rem;
-    line-height: 0;
-    letter-spacing: 0px;
-    font-weight: normal;
-    color: #333333d4;
+.submit:hover,
+.done:hover {
+  background-color: #01aa91;
 }
-.summary_content{
-    padding: 1.143rem;
-    padding-top: 0.571rem;
-}
-.inline_summary{
-    display: flex;
+.submit:focus,
+.done:hover {
+  background-color: #01aa91;
 }
 
-.inpt2{
-    width: 67%;
+.summary {
+  background-clip: border-box;
+  background-color: #ffffff;
+  border: solid 1px #01c3a7;
+  position: absolute;
+  z-index: 100;
+  width: 30rem;
 }
 
-.inpt3{
-    width: 25%;
+.summary span {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 0.857rem;
+  line-height: 0;
+  letter-spacing: 0px;
+  font-weight: normal;
+  color: #333333d4;
+  cursor: pointer;
 }
-.done{
-    border: none;
-    cursor: pointer;
-    background-color: #01C3A7;
-    border-radius: 0.429rem;
-    color: #FFFFFF;
-    width: 100%;
-    font-family: Circular,Helvetica,Arial,sans-serif;
-    font-size: 1.429rem;
-    font-weight: bold;
-    min-height: 42px;
-    outline: none;
+.summary_content {
+  padding: 1.143rem;
+  padding-top: 0.571rem;
+}
+.inline_summary {
+  display: flex;
 }
 
-.railcard_span{
-    color: #3367AB !important;
-    line-height: 4 !important;
+.inpt2 {
+  width: 67%;
+}
+
+.inpt3 {
+  width: 25%;
+}
+.done {
+  border: none;
+  cursor: pointer;
+  background-color: #01c3a7;
+  border-radius: 0.429rem;
+  color: #ffffff;
+  width: 100%;
+  font-family: Circular, Helvetica, Arial, sans-serif;
+  font-size: 1.429rem;
+  font-weight: bold;
+  min-height: 42px;
+  outline: none;
+}
+
+.railcard_span {
+  color: #3367ab !important;
+  line-height: 4 !important;
+}
+
+.season_div {
+  height: 13.28571rem;
+  width: 100%;
+}
+.in_season_div {
+  position: relative;
+  background-color: #ffffff;
+  border: solid 1px #b2b2b2;
+  border-radius: 0.214rem;
+  color: #192325;
+  margin-top: 3.57143rem;
+  display: flex;
+  align-items: center;
+  padding-right: 4px;
+}
+
+.in_season_div span {
+  position: absolute;
+  left: 0.85714rem;
+  top: 0.2856rem;
+}
+.in_season_div input {
+  width: 89%;
+  background-color: transparent;
+  line-height: 1.3rem;
+  padding: 2.14286rem 2.286rem 0.571rem 0.85714rem;
+  border: none;
+  font-weight: bold;
 }

@@ -1,17 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import direction from "../photos/sign.svg";
 
 export default function ViaAvoid() {
+  const [viaState, setviaState] = useState(0);
   return (
     <div>
-      <div className="via">
+      <div
+        className="via"
+        onClick={() => {
+          viaState ? setviaState(0) : setviaState(1);
+        }}
+      >
         <img className="image" alt={direction} src={direction}></img>
         <span>Via / Avoid</span>
       </div>
-      <div className="via_content">
+      <div className="via_content" style={{ display: viaState ? "flex" : "none" }}>
         <div className="via_content_first">
           <select className="inpt">
-            <option selected="" value="">
+            <option value="">
               Select...
             </option>
             <option value="VIA">Go via</option>
