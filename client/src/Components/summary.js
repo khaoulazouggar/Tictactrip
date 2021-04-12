@@ -1,17 +1,17 @@
-import React, { useState } from "react";
+import React, { useState} from "react";
 import remove from "../photos/close.svg";
+
 
 export default function Summary(props) {
   const numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
   const [count, setcount] = useState(0);
+
   const [disable, setdisable] = useState("Select a railcard");
   const [child, setchild] = useState(0);
   const handeleclick = () => {
     if (count < 3) setcount(count + 1);
   };
-  const handleRemoveItems = (e) => {
-    setcount([...Array(count)].filter((item, i) => i !== e));
-  };
+
   return (
     <div className="summary_content">
       <div>
@@ -54,13 +54,13 @@ export default function Summary(props) {
             </select>
           </div>
           <div className="in_inline_summary">
-            <span>Age of children</span>
+            <span style={child === 0 ? { color: "#B2B2B2" } : {}}>Age of children</span>
             {child === 0 ? (
               <select className="inpt inpt1" disabled style={{ backgroundColor: "#EBEBEB" }}></select>
             ) : (
               [...Array(child)].map((child, key) => (
                 <select className="inpt inpt1" key={key}>
-                  <option value="2020-04-10">{console.log([...Array(child)])}0-2</option>
+                  <option value="2020-04-10">{console.log(child)}0-2</option>
                   <option value="2017-04-10">3-4</option>
                   <option value="2011-04-10">5-15</option>
                 </select>
@@ -73,7 +73,7 @@ export default function Summary(props) {
             <select
               className="inpt inpt2"
               onChange={(e) => {
-                setdisable(e.target.value);
+                setdisable(e, key);
               }}
               key={key}
             >
@@ -137,7 +137,7 @@ export default function Summary(props) {
                     </option>
                   ))}
             </select>
-            <img className="image" alt={remove} src={remove} onClick={(e) => handleRemoveItems(e)}></img>
+            <img className="image" alt={remove} src={remove}></img>
           </div>
         ))}
         <div>

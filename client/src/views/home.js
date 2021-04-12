@@ -25,20 +25,20 @@ export default function Home() {
           {/* Out /Return section */}
           <div className="out_return">
             {/* Out section */}
-            <Out data={{radioState, setradioState}}/>
+            <Out data={{ radioState, setradioState }} />
             {/* Return section */}
-            <Return data={{radioState, setradioState}}/>
-            <div className="season_div" style={{display: radioState === 4 ? "block" : "none"}}>
+            <Return data={{ radioState, setradioState }} />
+            <div className="season_div" style={{ display: radioState === 4 ? "block" : "none" }}>
               <div className="in_season_div">
                 <span>Start date</span>
-                <input />
+                <input disabled/>
                 <img className="image img1" alt={arrow1} src={arrow1}></img>
               </div>
             </div>
           </div>
-          <hr className="hr" />
+          <hr className="hr" style={{ display: radioState === 4 ? "none" : "flex" }} />
           {/* passenger-summary section */}
-          <div>
+          <div style={{ display: radioState === 4 ? "none" : "flex" }}>
             <button
               className="passenger-summary"
               onClick={() => {

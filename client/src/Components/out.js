@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
+import { MuiPickersUtilsProvider, KeyboardDatePicker } from "@material-ui/pickers";
+import DateFnsUtils from "@date-io/date-fns";
 
 export default function Out(props) {
+  const [date, setdate] = useState(new Date());
   return (
-    <div className="out" style={{display: props.data.radioState === 4 ?  "none" :"block"}}>
+    <div className="out" style={{ display: props.data.radioState === 4 ? "none" : "block" }}>
       <div className="out_span">
         <span>Out</span>
       </div>
@@ -10,11 +13,26 @@ export default function Out(props) {
         <span className="day">Today</span>
         <span className="day">Tomorrow</span>
       </div>
-      <input className="inpt inpt1" type="text" placeholder="Enter..." />
+      <MuiPickersUtilsProvider utils={DateFnsUtils}>
+        <KeyboardDatePicker
+          className="inpt inpt1 inptdate"
+          disableToolbar
+          variant="inline"
+          format="MM/dd/yyyy"
+          margin="normal"
+          id="date-picker"
+          // label="Date picker inline"
+          value={date}
+          onChange={(dt) => {
+            setdate(dt);
+          }}
+          KeyboardButtonProps={{
+            "aria-label": "change date",
+          }}
+        />
+      </MuiPickersUtilsProvider>
       <select className="inpt inpt1">
-        <option value="departAfter">
-            Leaving at
-          </option>
+        <option value="departAfter">Leaving at</option>
         <option value="arriveBefore">Arriving by</option>
       </select>
       <div className="inline_div">
